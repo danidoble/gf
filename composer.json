@@ -1,0 +1,31 @@
+{
+    "name": "danidoble/gf",
+    "description": "useful functions for any project",
+    "type": "plugin",
+    "keywords": [
+        "danidoble",
+        "site"
+    ],
+    "authors": [
+        {
+            "name": "danidoble",
+            "email": "dani.doble.d@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "danidoble/translation": "^0.0.1"
+    },
+    "autoload": {
+        "files": [ "src/Global.php" ],
+        "psr-4": {
+            "Danidoble\\GF\\": "src\\"
+        },
+        "exclude-from-classmap": [
+            "/test/"
+        ]
+    },
+    "version": "v0.0.1"
+}

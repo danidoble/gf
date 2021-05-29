@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d25700da56cb9d7067e6308722af0301",
+    "packages": [
+        {
+            "name": "danidoble/translation",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danidoble/translation.git",
+                "reference": "e683f633e6a48702a4217345f76ca6a9b79ee4a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danidoble/translation/zipball/e683f633e6a48702a4217345f76ca6a9b79ee4a6",
+                "reference": "e683f633e6a48702a4217345f76ca6a9b79ee4a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3|^8.0"
+            },
+            "type": "plugin",
+            "autoload": {
+                "files": [
+                    "src/Global.php"
+                ],
+                "psr-4": {
+                    "Danidoble\\Translation\\": "src\\"
+                },
+                "exclude-from-classmap": [
+                    "/test/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "danidoble",
+                    "email": "dani.doble.d@hotmail.com"
+                }
+            ],
+            "description": "translate with json file",
+            "keywords": [
+                "danidoble",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/danidoble/translation/issues",
+                "source": "https://github.com/danidoble/translation/tree/v0.0.1"
+            },
+            "time": "2021-05-29T17:13:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
