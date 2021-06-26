@@ -53,7 +53,7 @@ class Dd
      */
     public static function diffForHumansComplete($date): string
     {
-        return self::diffForHumans($date) . ' '.tr::__('at').' ' . date('H:i', strtotime($date));
+        return self::diffForHumans($date) . ' ' . tr::__('at') . ' ' . date('H:i', strtotime($date));
     }
 
     /**

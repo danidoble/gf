@@ -2,9 +2,14 @@
     "name": "danidoble/gf",
     "description": "useful functions for any project",
     "type": "plugin",
+    "homepage": "https://github.com/danidoble/gf",
+    "license": "MIT",
+    "suggest": {
+
+    },
     "keywords": [
         "danidoble",
-        "site"
+        "functions"
     ],
     "authors": [
         {
@@ -16,16 +21,16 @@
     "require": {
         "php": "^7.3|^8.0",
         "ext-json": "*",
-        "danidoble/translation": "^0.0.1"
+        "danidoble/translation": "*"
     },
     "autoload": {
-        "files": [ "src/Global.php" ],
+        "files": [ "Src/Global.php" ],
         "psr-4": {
-            "Danidoble\\GF\\": "src\\"
+            "Danidoble\\GF\\": "Src\\"
         },
         "exclude-from-classmap": [
-            "/test/"
+            "/Tests/"
         ]
     },
-    "version": "v0.0.1"
+    "version": "v0.0.2"
 }

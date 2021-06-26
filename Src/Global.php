@@ -1,9 +1,9 @@
 <?php
 
 use Danidoble\Translation\Translation as tr;
-use Danidoble\GF\Dd as dd;
+use Danidoble\GF\Dd as ddx;
 
-if(!function_exists('env')){
+if (!function_exists('env')) {
     /**
      * @param $index
      * @param null $default
@@ -15,7 +15,7 @@ if(!function_exists('env')){
     }
 }
 
-if(!function_exists('diffForHumans')) {
+if (!function_exists('diffForHumans')) {
     /**
      * @param $date
      * @return string
@@ -35,7 +35,7 @@ if(!function_exists('diffForHumans')) {
     }
 }
 
-if(!function_exists('diffForHumansMonth')) {
+if (!function_exists('diffForHumansMonth')) {
     /**
      * @param $date
      * @return string
@@ -49,18 +49,18 @@ if(!function_exists('diffForHumansMonth')) {
     }
 }
 
-if(!function_exists('diffForHumansComplete')) {
+if (!function_exists('diffForHumansComplete')) {
     /**
      * @param $date
      * @return string
      */
     function diffForHumansComplete($date): string
     {
-        return dd::diffForHumans($date) . ' ' . tr::__('at') . ' ' . date('H:i', strtotime($date));
+        return ddx::diffForHumans($date) . ' ' . tr::__('at') . ' ' . date('H:i', strtotime($date));
     }
 }
 
-if(!function_exists('randStr')) {
+if (!function_exists('randStr')) {
     /**
      * @param int $length
      * @return string
@@ -71,7 +71,7 @@ if(!function_exists('randStr')) {
     }
 }
 
-if(!function_exists('dateFormats')) {
+if (!function_exists('dateFormats')) {
     /**
      * @param null $date
      * @param false $sum
@@ -99,13 +99,13 @@ if(!function_exists('dateFormats')) {
         $time["UTCv2"] = date("Y-m-d\TH:i:s.vO", $str);
         $time["mysql"] = date("Y-m-d H:i:s", $str);
         $time["slashes"] = date("d/m/Y", $str);//'26/06/2020'
-        $time["formatted"] = dd::diffForHumans(date("Y-m-d H:i:s", $str));
-        $time["formatted_complete"] = dd::diffForHumansComplete(date("Y-m-d H:i:s", $str));
+        $time["formatted"] = ddx::diffForHumans(date("Y-m-d H:i:s", $str));
+        $time["formatted_complete"] = ddx::diffForHumansComplete(date("Y-m-d H:i:s", $str));
         $time["custom"] = (object)[
             "date" => date("Y-m-d", $str),
             "year" => date("Y", $str),
             "time" => date("H:i:s", $str),
-            "month" => dd::diffForHumansMonth(date("Y-m-d H:i:s", $str)),
+            "month" => ddx::diffForHumansMonth(date("Y-m-d H:i:s", $str)),
         ];
 
         return (object)$time;

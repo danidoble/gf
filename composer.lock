@@ -4,39 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d25700da56cb9d7067e6308722af0301",
+    "content-hash": "ae9663732e0d1eef9fbfd2132e25d3fb",
     "packages": [
         {
             "name": "danidoble/translation",
-            "version": "v0.0.1",
+            "version": "v0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/danidoble/translation.git",
-                "reference": "e683f633e6a48702a4217345f76ca6a9b79ee4a6"
+                "reference": "36ff9bbdaaac2f68872f0d61524c18b58632fbf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danidoble/translation/zipball/e683f633e6a48702a4217345f76ca6a9b79ee4a6",
-                "reference": "e683f633e6a48702a4217345f76ca6a9b79ee4a6",
+                "url": "https://api.github.com/repos/danidoble/translation/zipball/36ff9bbdaaac2f68872f0d61524c18b58632fbf7",
+                "reference": "36ff9bbdaaac2f68872f0d61524c18b58632fbf7",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.3|^8.0"
             },
+            "suggest": {
+                "danidoble/gf": "*"
+            },
             "type": "plugin",
             "autoload": {
                 "files": [
-                    "src/Global.php"
+                    "Src/Global.php"
                 ],
                 "psr-4": {
-                    "Danidoble\\Translation\\": "src\\"
+                    "Danidoble\\Translation\\": "Src\\"
                 },
                 "exclude-from-classmap": [
-                    "/test/"
+                    "/Tests/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "danidoble",
@@ -44,15 +50,16 @@
                 }
             ],
             "description": "translate with json file",
+            "homepage": "https://github.com/danidoble/translation",
             "keywords": [
                 "danidoble",
                 "translation"
             ],
             "support": {
                 "issues": "https://github.com/danidoble/translation/issues",
-                "source": "https://github.com/danidoble/translation/tree/v0.0.1"
+                "source": "https://github.com/danidoble/translation/tree/v0.0.2"
             },
-            "time": "2021-05-29T17:13:50+00:00"
+            "time": "2021-06-26T16:36:32+00:00"
         }
     ],
     "packages-dev": [],
