@@ -3,7 +3,7 @@
 use Danidoble\Translation\Translation as tr;
 use Danidoble\GF\Dd as ddx;
 
-if (!function_exists('env')) {
+if (!function_exists('env') && !defined('bypass_env')) {
     /**
      * @param $index
      * @param null $default
