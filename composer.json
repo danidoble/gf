@@ -19,7 +19,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "ext-json": "*",
         "danidoble/translation": "*"
     },
@@ -32,5 +32,5 @@
             "/Tests/"
         ]
     },
-    "version": "v0.0.3"
+    "version": "v0.1.0"
 }

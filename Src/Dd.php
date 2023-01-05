@@ -1,17 +1,20 @@
 <?php
+/*
+ * Created by danidoble 2021
+ */
 
 namespace Danidoble\GF;
 
-use \Danidoble\Translation\Translation as tr;
+use Danidoble\Translation\Translation as tr;
 
-class Dd
+class Dd implements IDd
 {
     /**
-     * @param $index
+     * @param string $index
      * @param null $default
      * @return mixed|null
      */
-    public static function env($index, $default = null)
+    public static function env(string $index, $default = null): mixed
     {
         return $_ENV[$index] ?? $default;
     }
@@ -58,11 +61,12 @@ class Dd
 
     /**
      * @param int $length
+     * @param string $str
      * @return string
      */
-    public static function randStr(int $length = 60): string
+    public static function randStr(int $length = 60, string $str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string
     {
-        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+        return substr(str_shuffle($str), 0, $length);
     }
 
     /**
@@ -102,5 +106,25 @@ class Dd
         ];
 
         return (object)$time;
+    }
+
+    /**
+     * @param string $dir
+     * @return array
+     */
+    public static function recursiveScanDir(string $dir): array
+    {
+        $dir = realpath(rtrim($dir, '/')) . '/';
+        $aux = [];
+        $arr = array_values(array_diff(scandir($dir), array('..', '.')));
+
+        foreach ($arr as $val) {
+            if (file_exists($dir . $val) && is_dir($dir . $val)) {
+                $aux[$val] = self::recursiveScanDir(($dir . $val));
+            } else if (file_exists($dir . $val)) {
+                $aux[$val] = true;
+            }
+        }
+        return $aux;
     }
 }
